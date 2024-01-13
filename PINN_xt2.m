@@ -111,7 +111,7 @@ LAMBDA = zeros(numEpochs,length(x_onecolf));
 LOSS = zeros(numEpochs,1);
 for epoch = 1:numEpochs
     tic
-    LAMBDA(epoch,:) = extractdata(parameters.lambda2);
+    LAMBDA(epoch,:) = extractdata(parameters.lambda);
     reset(mbq);
     epoch
     while hasdata(mbq)
