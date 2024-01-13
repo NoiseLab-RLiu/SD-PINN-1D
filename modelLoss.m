@@ -23,7 +23,7 @@ end
 
 loss_s = 0; % loss for the sign
 for i=1:length(parameters.lambda)
-    loss_s = loss_s + 1e1*relu(parameters.lambda2(i));
+    loss_s = loss_s + 1e1*relu(parameters.lambda(i));
 end
 
 loss_b = 10*(mse(parameters.lambda(1), -2.25, 'DataFormat','U') + mse(parmeters.lambda(end), -4, 'DataFormat','U'));
