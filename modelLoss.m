@@ -26,7 +26,7 @@ for i=1:length(parameters.lambda)
     loss_s = loss_s + 1e1*relu(parameters.lambda(i));
 end
 
-loss_b = 10*(mse(parameters.lambda(1), -2.25, 'DataFormat','U') + mse(parmeters.lambda(end), -4, 'DataFormat','U'));
+loss_b = 10*(mse(parameters.lambda(1), -2.25, 'DataFormat','U') + mse(parameters.lambda(end), -4, 'DataFormat','U'));
 
 % Calculate lossU. Enforce initial and boundary conditions.
 U0Pred = model(parameters,X0,T0);
