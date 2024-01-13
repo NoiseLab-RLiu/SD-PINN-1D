@@ -17,12 +17,12 @@ f = Utt + repmat(parameters.lambda,1,(190*2+1)).*Uxx;
 zeroTarget = zeros(size(f), "like", f);
 lossF = 10*mse(f, zeroTarget);
 % the smoothness loss is incorporated into lossF
-for i=1:2:length(parameters.lambda2)-2
+for i=1:2:length(parameters.lambda)-2
     lossF = lossF+10*mse(parameters.lambda(i)+parameters.lambda(i+2)-2*parameters.lambda(i+1), 0, 'DataFormat','U');
 end
 
 loss_s = 0; % loss for the sign
-for i=1:length(parameters.lambda2)
+for i=1:length(parameters.lambda)
     loss_s = loss_s + 1e1*relu(parameters.lambda2(i));
 end
 
