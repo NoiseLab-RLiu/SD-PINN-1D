@@ -50,7 +50,7 @@ caxis([-2 2])
 exportgraphics(ax,'noisy-measurements1.png')
 
 U0 = reshape(Usel, 1, []);
-% Ground truth
+% Ground truth, only used for plotting 
 GT = -ones(21,1);
 GT(1:3) = -2.25;
 GT(4:8) = [-1.96,-1.69,-1.44,-1.21,-1];
