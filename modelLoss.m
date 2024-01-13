@@ -18,7 +18,7 @@ zeroTarget = zeros(size(f), "like", f);
 lossF = 10*mse(f, zeroTarget);
 % the smoothness loss is incorporated into lossF
 for i=1:2:length(parameters.lambda2)-2
-    lossF = lossF+10*mse(parameters.lambda2(i)+parameters.lambda2(i+2)-2*parameters.lambda2(i+1), 0, 'DataFormat','U');
+    lossF = lossF+10*mse(parameters.lambda(i)+parameters.lambda(i+2)-2*parameters.lambda(i+1), 0, 'DataFormat','U');
 end
 
 loss_s = 0; % loss for the sign
