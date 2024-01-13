@@ -84,7 +84,7 @@ numIn = numNeurons;
 parameters.("fc" + numLayers).Weights = initializeHe(sz,numIn);
 parameters.("fc" + numLayers).Bias = initializeZeros([1 1]);
 %%
-numEpochs = 400000;
+numEpochs = 400000; % This is a large value. The training can be satisfactory much earlier before reaching this number of epochs.
 miniBatchSize = length(X0f);
 
 executionEnvironment = "auto";
