@@ -141,7 +141,7 @@ for epoch = 1:numEpochs
 end
 %% Plot
 figure
-plot(-LAMBDA2(:,1:2:end))
+plot(-LAMBDA(:,1:2:end))
 xlabel('Epoch','Interpreter','latex')
 ylabel('$\widehat{\lambda}_{m1}$','Interpreter','latex')
 ax=gca
@@ -153,9 +153,9 @@ ylim([-0.5 4.5])
 figure
 plot(3:23,-GT)
 hold on
-plot(3:23,-extractdata(parameters.lambda2(1:2:end)))
+plot(3:23,-extractdata(parameters.lambda(1:2:end)))
 xlim([3,23])
-legend({'True','Recovered by LSQ','Recovered by LSQ with TVR','Recovered by SD-PINN'},'Interpreter','latex')
+legend({'True','Recovered by SD-PINN'},'Interpreter','latex')
 xlabel('x (\rm dx)','Interpreter','latex')
 ylabel('$c^2$','Interpreter','latex')
 xticks([3,5,10,15,20,23])
